@@ -1,5 +1,4 @@
-import mongoose, { ObjectId, Schema } from "mongoose";
-
+import mongoose, { Schema } from "mongoose";
 export interface IFOOD extends Document {
   foodName: string;
   price: number;
