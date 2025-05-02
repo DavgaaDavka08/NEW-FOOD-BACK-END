@@ -15,8 +15,12 @@ const UserSchemaType: Schema = new Schema(
     password: { type: String, required: true },
     phoneNumber: { type: String, default: "" },
     address: { type: String, default: "" },
-    orderedFoods: { type: [Schema.ObjectId], red: "FoodsOrder" },
-    role: { type: ["USER", "ADMIN"], default: "" },
+    orderedFoods: { type: [Schema.ObjectId], ref: "FoodOrder" },
+    role: {
+      type: String,
+      enum: ["USER", "ADMIN"],
+      default: "USER",
+    },
   },
   { timestamps: true }
 );

@@ -16,7 +16,7 @@ export const addCategory = async (req: Request, res: Response) => {
     console.log("addcategory :>> ", addcategory);
   } catch (error) {
     console.log(error);
-    res.status(400).json({ message: "nemhed алдаа гарлаа", error });
+    res.status(500).json({ message: "nemhed алдаа гарлаа", error });
   }
 };
 export const deleteCategory = async (

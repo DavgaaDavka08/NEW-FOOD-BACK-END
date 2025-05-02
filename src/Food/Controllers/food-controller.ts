@@ -16,7 +16,7 @@ export const getFood = async (req: Request, res: Response): Promise<void> => {
     const getfood = await foodSchemaType.find().populate("category");
 
     if (!getfood || getfood.length === 0) {
-      res.status(404).json({ message: "Хоол олдсонгүй" }); // ✅ return
+      res.status(404).json({ message: "Хоол олдсонгүй" });
     }
 
     res.status(200).json({ message: "Амжилттай!", getfood });

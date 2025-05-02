@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-
 import { hashSync } from "bcryptjs";
 import UserSchemaType from "../../User/userModels/userModels";
 export const SignUp = async (req: Request, res: Response): Promise<void> => {

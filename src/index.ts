@@ -8,6 +8,7 @@ import food from "../src/Food/Router/food-router";
 import burtguuleh from "./burtguuleh/Router-Sign-In/signupRouter";
 import signinrouter from "./User/userRouter/userRouter";
 import checkPasswords from "../src/goAdmin/goRouters/goRouters";
+import getorder from "../src/Order/Router/orderRouter";
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
@@ -19,6 +20,7 @@ app.use("/food", food);
 app.use("/api", category);
 app.use("/burtguuleh", burtguuleh);
 app.use("/signin", signinrouter);
+app.use("/orders", getorder);
 app.listen(port, () => {
   console.log(`port is runing at:>${port}`);
 });
